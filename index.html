@@ -6,196 +6,223 @@
     <title>Muskan Chaudhur | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: '#2563eb',
-                        dark: '#0f172a',
-                        card: '#1e293b'
+                        brand: '#a855f7', /* Purple */
+                        accent: '#ec4899', /* Pink */
+                        dark: '#090514', /* Deep Space Dark */
+                        card: 'rgba(30, 20, 50, 0.4)' /* Frosted Glass Dark */
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-dark text-slate-300 font-sans antialiased selection:bg-brand selection:text-white">
+<body class="bg-dark text-slate-300 antialiased selection:bg-brand selection:text-white relative overflow-x-hidden">
 
-    <nav class="fixed w-full bg-dark/90 backdrop-blur-sm border-b border-slate-800 z-50">
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand rounded-full mix-blend-screen filter blur-[120px] opacity-20 pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-accent rounded-full mix-blend-screen filter blur-[120px] opacity-20 pointer-events-none"></div>
+
+    <nav class="fixed w-full bg-dark/80 backdrop-blur-md border-b border-white/5 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <span class="text-white font-bold text-xl tracking-tight">Muskan Chaudhur</span>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-white transition">About</a>
-                    <a href="#skills" class="hover:text-white transition">Skills</a>
-                    <a href="#projects" class="hover:text-white transition">Projects</a>
+            <div class="flex items-center justify-between h-20">
+                <span class="text-white font-extrabold text-2xl tracking-tight">MC<span class="text-brand">.</span></span>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#about" class="hover:text-brand transition-colors">About</a>
+                    <a href="#skills" class="hover:text-brand transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="hero" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between min-h-[80vh] gap-12">
+    <section id="hero" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between min-h-[85vh] gap-12 relative z-10">
         
         <div class="flex-1 flex flex-col justify-center text-center md:text-left">
+            <h2 class="text-brand font-semibold tracking-widest uppercase mb-3 text-sm">Welcome to my portfolio</h2>
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
-                Hi, I'm <span class="text-brand">Muskan</span>.
+                Hi, I'm <br/>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand to-accent drop-shadow-sm">Muskan Chaudhur</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto md:mx-0 mb-8 leading-relaxed">
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto md:mx-0 mb-8 leading-relaxed font-light">
                 A Software Engineering student specializing in AI & ML. I build offline-first applications, scalable backend microservices, and client-side machine learning solutions.
             </p>
             <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
-                <a href="mailto:muskanchaudhur1007@gmail.com" class="bg-brand hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition flex items-center gap-2">
-                    <i class="fas fa-envelope"></i> Get in Touch
+                <a href="mailto:muskanchaudhur1007@gmail.com" class="bg-gradient-to-r from-brand to-accent hover:opacity-90 text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-brand/30 flex items-center gap-2 transform hover:-translate-y-1">
+                    <i class="fas fa-paper-plane"></i> Email Me
                 </a>
-                <a href="https://www.linkedin.com/in/muskan-chaudhur-a6b645399/" target="_blank" class="bg-card hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium border border-slate-700 transition flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/muskan-chaudhur-a6b645399/" target="_blank" class="bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-semibold border border-white/10 transition-all flex items-center gap-2 transform hover:-translate-y-1">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
             </div>
-            <p class="text-slate-500"><i class="fas fa-map-marker-alt text-brand mr-2"></i> West Bengal, India</p>
+            <p class="text-slate-500 font-medium"><i class="fas fa-location-dot text-accent mr-2"></i> West Bengal, India</p>
         </div>
 
-        <div class="flex-1 flex justify-center md:justify-end w-full">
-            <div class="relative w-56 h-56 md:w-80 md:h-80">
-                <div class="absolute inset-0 bg-brand rounded-full blur-3xl opacity-20"></div>
-                <img src="profile.jpeg" alt="Muskan Chaudhur" class="relative z-10 w-full h-full object-cover rounded-full border-4 border-slate-800 shadow-2xl">
+        <div class="flex-1 flex justify-center w-full mt-10 md:mt-0">
+            <div class="relative w-64 h-64 md:w-96 md:h-96 group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand to-accent rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                <img src="profile.jpeg" alt="Muskan Chaudhur" class="relative z-10 w-full h-full object-cover rounded-full border-4 border-dark shadow-2xl transition-transform duration-500 group-hover:scale-105">
             </div>
         </div>
 
     </section>
 
-    <section id="about" class="py-20 bg-slate-900 border-t border-slate-800">
+    <section id="about" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-                <i class="fas fa-graduation-cap text-brand"></i> Education
-            </h2>
-            <div class="bg-card p-8 rounded-xl border border-slate-800">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-[2px] w-12 bg-gradient-to-r from-brand to-accent"></div>
+                <h2 class="text-3xl font-bold text-white tracking-wide">Education</h2>
+            </div>
+            <div class="bg-card backdrop-blur-md p-8 rounded-2xl border border-white/5 shadow-xl hover:border-brand/30 transition-colors duration-300">
+                <div class="flex flex-col md:flex-row justify-between mb-6">
                     <div>
-                        <h3 class="text-xl font-bold text-white">Supreme Knowledge Foundation Group of Institutions (MAKAUT)</h3>
-                        <p class="text-brand font-medium">Bachelor of Technology in Computer Science & Engineering (AI & ML)</p>
+                        <h3 class="text-2xl font-bold text-white mb-1">Supreme Knowledge Foundation Group of Institutions</h3>
+                        <p class="text-brand font-medium text-lg">Bachelor of Technology in Computer Science & Engineering (AI & ML)</p>
                     </div>
-                    <div class="text-left md:text-right mt-2 md:mt-0">
-                        <p class="text-slate-400">West Bengal, India</p>
-                        <p class="text-slate-300 bg-slate-800 px-3 py-1 rounded-full inline-block text-sm mt-1">Anticipated Graduation: July 2028</p>
+                    <div class="text-left md:text-right mt-4 md:mt-0">
+                        <p class="text-slate-400 mb-2">West Bengal, India</p>
+                        <span class="bg-brand/20 text-brand px-4 py-1.5 rounded-full text-sm font-semibold border border-brand/20">Expected: July 2028</span>
                     </div>
                 </div>
-                <ul class="list-disc list-inside space-y-2 text-slate-400">
-                    <li><strong class="text-slate-200">Semester Academics:</strong> SGPA: Sem 1: 7.91, Sem 2: 7.02, Sem 3: 8.09</li>
-                    <li><strong class="text-slate-200">Relevant Coursework:</strong> Data Structures and Algorithms (DSA), Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks.</li>
-                </ul>
+                <div class="bg-black/20 rounded-xl p-6 border border-white/5">
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-accent mt-1 mr-4"></i>
+                            <div>
+                                <strong class="text-white">Semester Academics:</strong> 
+                                <span class="text-slate-400 block mt-1">SGPA: Sem 1: <span class="text-white font-medium">7.91</span> | Sem 2: <span class="text-white font-medium">7.02</span> | Sem 3: <span class="text-white font-medium">8.09</span></span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-accent mt-1 mr-4"></i>
+                            <div>
+                                <strong class="text-white">Relevant Coursework:</strong> 
+                                <span class="text-slate-400 block mt-1 leading-relaxed">Data Structures and Algorithms (DSA), Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20">
+    <section id="skills" class="py-24 relative z-10 bg-black/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-                <i class="fas fa-laptop-code text-brand"></i> Technical Skills
-            </h2>
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-[2px] w-12 bg-gradient-to-r from-brand to-accent"></div>
+                <h2 class="text-3xl font-bold text-white tracking-wide">Technical Arsenal</h2>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-card p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-700 pb-2">Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Java</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Python</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">C</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">SQL</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">JavaScript</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">HTML/CSS</span>
+                <div class="bg-card backdrop-blur-md p-8 rounded-2xl border border-white/5 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/10 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-code text-brand"></i> Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">Java</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">Python</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">C</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">SQL</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">JavaScript</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">HTML/CSS</span>
                     </div>
                 </div>
-                <div class="bg-card p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-700 pb-2">Frameworks & Libraries</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Spring Boot</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Node.js</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">NestJS</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Flutter</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">MediaPipe</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Web Audio API</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Google ML Kit</span>
+
+                <div class="bg-card backdrop-blur-md p-8 rounded-2xl border border-white/5 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/10 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-layer-group text-accent"></i> Frameworks & Libraries</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Spring Boot</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Node.js</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">NestJS</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Flutter</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">MediaPipe</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Google ML Kit</span>
                     </div>
                 </div>
-                <div class="bg-card p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-700 pb-2">Databases & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">H2</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Drift</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Kafka</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Git/GitHub</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Maven</span>
+
+                <div class="bg-card backdrop-blur-md p-8 rounded-2xl border border-white/5 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/10 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-database text-brand"></i> Databases & Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">PostgreSQL</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">H2</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">Drift</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">Kafka</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-brand/50 transition-colors">Git/GitHub</span>
                     </div>
                 </div>
-                <div class="bg-card p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-700 pb-2">Core Paradigms</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Client-Side ML</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Offline-First Architecture</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">REST APIs</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm border border-slate-700">Microservices</span>
+
+                <div class="bg-card backdrop-blur-md p-8 rounded-2xl border border-white/5 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/10 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-network-wired text-accent"></i> Core Paradigms</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Client-Side ML</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Offline-First Architecture</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">REST APIs</span>
+                        <span class="px-4 py-2 bg-white/5 text-slate-200 rounded-lg text-sm border border-white/10 hover:border-accent/50 transition-colors">Microservices</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-slate-900 border-t border-slate-800">
+    <section id="projects" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-                <i class="fas fa-project-diagram text-brand"></i> Technical Projects
-            </h2>
-            <div class="space-y-8">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-[2px] w-12 bg-gradient-to-r from-brand to-accent"></div>
+                <h2 class="text-3xl font-bold text-white tracking-wide">Featured Projects</h2>
+            </div>
+            
+            <div class="space-y-12">
                 
-                <div class="bg-card p-8 rounded-xl border border-slate-800">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-white">AI Driver Drowsiness Detection System</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-mono">JavaScript | MediaPipe | HTML5 Canvas | Web Audio API</p>
-                        <p class="text-brand text-sm italic mt-2"><i class="fas fa-award mr-1"></i> Official Exhibitor: JISTech2K26 11th International Technical Symposium</p>
+                <div class="bg-card backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group hover:border-brand/30 transition-all duration-500">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand to-accent"></div>
+                    <div class="mb-6">
+                        <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-brand transition-colors">AI Driver Drowsiness Detection System</h3>
+                        <p class="text-sm text-brand font-mono mb-4">JavaScript | MediaPipe | HTML5 Canvas | Web Audio API</p>
+                        <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-sm text-slate-300">
+                            <i class="fas fa-award text-accent"></i> Official Exhibitor: JISTech2K26 11th International Technical Symposium
+                        </span>
                     </div>
-                    <ul class="space-y-3 text-slate-400 mt-6">
+                    <ul class="space-y-4 text-slate-400 mt-8">
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Engineered a browser-native driver fatigue detection system using Vanilla JavaScript, HTML5 Canvas, and Web Audio API, eliminating external hardware dependencies.</span>
+                            <i class="fas fa-check-circle text-brand mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Engineered a browser-native driver fatigue detection system using Vanilla JavaScript, HTML5 Canvas, and Web Audio API, eliminating external hardware dependencies.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Integrated Google's MediaPipe Face Mesh via WebGL to track 468 3D facial landmarks in real-time, achieving sub-40ms processing latency per frame directly within the client browser.</span>
+                            <i class="fas fa-check-circle text-brand mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Integrated Google's MediaPipe Face Mesh via WebGL to track 468 3D facial landmarks in real-time, achieving sub-40ms processing latency per frame directly within the client browser.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Formulated client-side algorithmic logic to continuously compute Eye Aspect Ratio (EAR) and Mouth Aspect Ratio (MAR) across a rolling temporal window, optimizing a false negative rate below 5%.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Optimized the execution pipeline to deliver sustained inference at ≥15 FPS with an alert triggering latency under 500ms on commodity hardware.</span>
+                            <i class="fas fa-check-circle text-brand mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Formulated client-side algorithmic logic to continuously compute Eye Aspect Ratio (EAR) and Mouth Aspect Ratio (MAR) across a rolling temporal window, optimizing a false negative rate below 5%.</span>
                         </li>
                     </ul>
                 </div>
 
-                <div class="bg-card p-8 rounded-xl border border-slate-800">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-white">Automated Attendance System (Aegis)</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-mono">Flutter | Dart | Node.js | NestJS | Drift | PostgreSQL | Google ML Kit</p>
-                        <p class="text-brand text-sm italic mt-2"><i class="fas fa-award mr-1"></i> Selected Internally for Smart India Hackathon 2025 Submission</p>
+                <div class="bg-card backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group hover:border-accent/30 transition-all duration-500">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-brand"></div>
+                    <div class="mb-6">
+                        <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Automated Attendance System (Aegis)</h3>
+                        <p class="text-sm text-accent font-mono mb-4">Flutter | Dart | Node.js | NestJS | Drift | PostgreSQL | Google ML Kit</p>
+                        <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-sm text-slate-300">
+                            <i class="fas fa-star text-brand"></i> Selected Internally for Smart India Hackathon 2025 Submission
+                        </span>
                     </div>
-                    <ul class="space-y-3 text-slate-400 mt-6">
+                    <ul class="space-y-4 text-slate-400 mt-8">
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Developed an offline-first, two-step verification attendance mobile application using Flutter, Dart, Node.js, and NestJS to serve under-resourced educational environments.</span>
+                            <i class="fas fa-check-circle text-accent mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Developed an offline-first, two-step verification attendance mobile application using Flutter, Dart, Node.js, and NestJS to serve under-resourced educational environments.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Built a BLE proximity scanning module to automatically detect in-range student devices, reducing administrative roll-call time from 15 minutes to under 1 minute.</span>
+                            <i class="fas fa-check-circle text-accent mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Built a BLE proximity scanning module to automatically detect in-range student devices, reducing administrative roll-call time from 15 minutes to under 1 minute.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Integrated Google ML Kit to perform on-device facial recognition and liveness checks, securing the system against proxy attendance with 99%+ biometric verification accuracy.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chevron-right text-brand mt-1.5 mr-3 text-xs"></i>
-                            <span>Architected a network-independent Drift database solution that encrypts biometric templates and syncs records to a remote PostgreSQL backend upon network restoration.</span>
+                            <i class="fas fa-check-circle text-accent mt-1 mr-4"></i>
+                            <span class="leading-relaxed">Integrated Google ML Kit to perform on-device facial recognition and liveness checks, securing the system against proxy attendance with 99%+ biometric verification accuracy.</span>
                         </li>
                     </ul>
                 </div>
@@ -204,14 +231,15 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-center text-slate-400">
+    <footer class="bg-black/40 border-t border-white/5 py-12 text-center relative z-10">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-xl font-bold text-white mb-6">Muskan Chaudhur</h2>
-            <p class="mb-6">muskanchaudhur1007@gmail.com</p>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://www.linkedin.com/in/muskan-chaudhur-a6b645399/" target="_blank" class="hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+            <h2 class="text-2xl font-extrabold text-white mb-2">Muskan Chaudhur</h2>
+            <p class="mb-8 text-brand font-medium">muskanchaudhur1007@gmail.com</p>
+            <div class="flex justify-center gap-6 mb-10">
+                <a href="https://www.linkedin.com/in/muskan-chaudhur-a6b645399/" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand hover:border-brand transition-all hover:-translate-y-1 shadow-lg"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="mailto:muskanchaudhur1007@gmail.com" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-accent hover:border-accent transition-all hover:-translate-y-1 shadow-lg"><i class="fas fa-envelope text-xl"></i></a>
             </div>
-            <p class="text-sm">Built with HTML & Tailwind CSS.</p>
+            <p class="text-sm text-slate-500 font-light">&copy; 2026 Muskan Chaudhur. Built with HTML & Tailwind CSS.</p>
         </div>
     </footer>
 
